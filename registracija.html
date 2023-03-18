@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoKuca SM</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="container flex-nav">
+          <div class="nav-header">
+            <a href="index.html">
+              <h2>AutoKuca<span>SM</span></h2>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <nav class="nav-links" id="nav-links">
+            <ul>
+              <li class="nav-link"><a href="index.html">Pocetna</a></li>
+              <li class="nav-link"><a href="onama.html">O nama</a></li>
+              <li class="nav-link"><a href="garancija.html">Garancija</a></li>
+              <li class="nav-link"><a href="kontakt.html">Kontakt</a></li>
+              <li class="nav-link"><a id="button">Prijavi se</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <form class="popup">
+        <div class="popup-content">
+          <i class="fa fa-user fa-3x" id="user-icon" aria-hidden="true"></i>
+          <i class="fa fa-times" id="close-icon" aria-hidden="true"></i>
+          <input type="text" placeholder="Korisnicko ime" id="korIme" />
+          <input type="password" placeholder="Lozinka" id="lozinka" />
+          <p>
+            Nemate nalog?
+            <a href="registracija.html" class="btn-signup">Registruj se</a>
+          </p>
+          <button class="btn-login" id="dugme" type="submit">Uloguj se</button>
+        </div>
+      </form>
+    </header>
+    <main>
+      <div class="register">
+        <form id="form" class="form">
+          <h2>Registracija</h2>
+          <div class="form-control">
+            <label for="username">Korisnicko ime</label>
+            <input type="text" id="ime" placeholder="Unesi korisnicko ime" />
+          </div>
+          <div class="form-control">
+            <label for="email">E-mail adresa</label>
+            <input type="text" id="email" placeholder="Unesi email" />
+          </div>
+          <div class="form-control">
+            <label for="password">Lozinka</label>
+            <input type="password" id="lozinka" placeholder="Unesi lozinku" />
+          </div>
+          <div class="form-control">
+            <label for="password2">Ponovi Lozinku</label>
+            <input type="password" id="lozinka2" placeholder="Ponovi Lozinku" />
+          </div>
+          <button>Registruj se</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>AutoKuca<span>SM</span></h3>
+
+        <p class="footer-links">
+          <a href="index.html">Pocetna</a>
+          |
+          <a href="onama.html">O nama</a>
+          |
+          <a href="garancija.html">Garancija</a>
+          |
+          <a href="kontakt.html">Kontakt</a>
+        </p>
+
+        <p class="footer-company-name">
+          Copyright © 2021 <strong>AutoKuca SM</strong> All rights reserved
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Beograd</span> Srbija</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+381/60123-4567</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="#">autokucasm@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>O nama</span>
+          <strong>AutoKuca SM</strong> je tokom decenijskog iskustva u oblasti
+          prodaje korišćenih vozila u Srbiji, uspeo da izgradi i održi
+          reputaciju pouzdanog partnera, vodeći se osnovnom misijom da budemo
+          SIGURAN IZBOR naših klijenata.
+        </p>
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/afd19b9f4f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

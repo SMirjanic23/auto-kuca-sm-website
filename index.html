@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoKuca SM</title>
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="container flex-nav">
+          <div class="nav-header">
+            <a href="index.html">
+              <h2>AutoKuca<span>SM</span></h2>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <nav class="nav-links" id="nav-links">
+            <ul>
+              <li class="nav-link"><a href="index.html">Pocetna</a></li>
+              <li class="nav-link"><a href="onama.html">O nama</a></li>
+              <li class="nav-link"><a href="garancija.html">Garancija</a></li>
+              <li class="nav-link"><a href="kontakt.html">Kontakt</a></li>
+              <li class="nav-link"><a href="#" id="button">Prijavi se</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <form class="popup">
+        <div class="popup-content">
+          <i class="fa fa-user fa-3x" id="user-icon" aria-hidden="true"></i>
+          <i class="fa fa-times" id="close-icon" aria-hidden="true"></i>
+          <input type="text" placeholder="Korisnicko ime" id="korIme" />
+          <input type="password" placeholder="Lozinka" id="lozinka" />
+          <p>
+            Nemate nalog?
+            <a href="registracija.html" class="btn-signup">Registruj se</a>
+          </p>
+          <button class="btn-login" id="dugme" type="submit">Uloguj se</button>
+        </div>
+      </form>
+    </header>
+    <main>
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="images/slika1.jpg" style="width: 100%; height: auto" />
+          <div class="text">Vrsimo uslugu prodaje vasih automobila</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slika2.jpg" style="width: 100%; height: auto" />
+          <div class="text">Vasa kola mozete registrovati kod nas</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/slika3.jpg" style="width: 100%" />
+          <div class="text">Najpovoljnija prodaja kola</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <section>
+        <form>
+          <div class="main-container">
+            <div class="search-container">
+              <select class="option-select" id="marka">
+                <option value="sve">Sve marke</option>
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes Benz</option>
+                <option value="audi">Audi</option>
+              </select>
+              <select class="option-select" id="godiste">
+                <option  disabled selected>Godiste do</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+              </select>
+            </div>
+            <div class="search-container">
+              <select class="option-select" id="model">
+                <option value="svi" disabled selected>Svi Modeli</option>
+              </select>
+              <select class="option-select" id="karoserija">
+                <option selected>Karoserija</option>
+                <option value="hecbek">Hecbek</option>
+                <option value="limuzina">Limuzina</option>
+              </select>
+              <button class="option-select button" type="reset">Ponisti pretragu</button>
+            </div>
+            <div class="search-container">
+                <input class="option-select" type="number" placeholder="Cena do" min="2000" max="15000" id="cena">
+              <select class="option-select" id="gorivo">
+                <option  disabled selected>Gorivo</option>
+                <option value="dizel">Dizel</option>
+                <option value="benzin">Benzin</option>
+              </select>
+              <button class="option-select button" type="submit" id="pretrazi">Pretrazi</button>
+              </select>
+            </div>
+          </div>
+        </form>
+
+
+        <div class="wrapper-cars" id="wrapper"></div>
+      </section>
+    </main>
+
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>AutoKuca<span>SM</span></h3>
+
+        <p class="footer-links">
+          <a href="index.html">Pocetna</a>
+          |
+          <a href="onama.html">O nama</a>
+          |
+          <a href="garancija.html">Garancija</a>
+          |
+          <a href="kontakt.html">Kontakt</a>
+        </p>
+
+        <p class="footer-company-name">
+          Copyright © 2021 <strong>AutoKuca SM</strong> All rights reserved
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Beograd</span> Srbija</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+381/60123-4567</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="#">autokucasm@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>O nama</span>
+          <strong>AutoKuca SM</strong> je tokom decenijskog iskustva u oblasti
+          prodaje korišćenih vozila u Srbiji, uspeo da izgradi i održi
+          reputaciju pouzdanog partnera, vodeći se osnovnom misijom da budemo
+          SIGURAN IZBOR naših klijenata.
+        </p>
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/afd19b9f4f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
