@@ -1,32 +1,32 @@
 // NAVBAR TOGGLE
-const navToggle = document.querySelector("#navToggle");
-const nav = document.querySelector("#nav-links");
+const navToggle = document.querySelector('#navToggle');
+const nav = document.querySelector('#nav-links');
 
-navToggle.addEventListener("click", () => {
-  nav.classList.toggle("nav-open");
+navToggle.addEventListener('click', () => {
+  nav.classList.toggle('nav-open');
 });
 
 // POPUP LOGIN
-document.getElementById("button").addEventListener("click", function () {
-  document.querySelector(".popup").style.display = "flex";
+document.getElementById('button').addEventListener('click', function () {
+  document.querySelector('.popup').style.display = 'flex';
 });
 
-document.getElementById("close-icon").addEventListener("click", function () {
-  document.querySelector(".popup").style.display = "none";
+document.getElementById('close-icon').addEventListener('click', function () {
+  document.querySelector('.popup').style.display = 'none';
 });
 
-const dugme = document.getElementById("dugme");
+const dugme = document.getElementById('dugme');
 if (dugme !== null) {
-  let lozinka = document.getElementById("lozinka");
-  let korime = document.getElementById("korIme");
+  let lozinka = document.getElementById('lozinka');
+  let korime = document.getElementById('korIme');
 
-  dugme.addEventListener("click", (e) => {
+  dugme.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if (korime.value == "admin" && lozinka.value == "admin") {
-      document.location.href = "admin.html";
+    if (korime.value == 'admin' && lozinka.value == 'admin') {
+      document.location.href = '/admin panel/admin.html';
     } else {
-      alert("GRESKA!");
+      alert('GRESKA!');
     }
   });
 }
@@ -48,12 +48,12 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementsByClassName('mySlides');
   if (slides.length == 0) {
     return;
   }
 
-  var dots = document.getElementsByClassName("dot");
+  var dots = document.getElementsByClassName('dot');
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -61,13 +61,13 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = 'none';
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(' active', '');
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].className += ' active';
 }
 
 // ADMIN CHART
@@ -79,54 +79,54 @@ var auto = function (marka, godiste, gorivo, cena) {
 };
 
 var automobili = [
-  new auto("Audi", 2016, "Dizel", 14000),
-  new auto("Audi", 2010, "Benzin", 7000),
-  new auto("Audi", 2006, "Dizel", 5000),
-  new auto("Audi", 2010, "Dizel", 11000),
-  new auto("BMW", 2011, "Dizel", 10000),
-  new auto("BMW", 2010, "Dizel", 14300),
-  new auto("BMW", 2009, "Benzin", 9000),
-  new auto("BMW", 2006, "Dizel", 6000),
-  new auto("Mercedes Benz", 2014, "Benzin", 10000),
-  new auto("Mercedes Benz", 2011, "Dizel", 10500),
-  new auto("Mercedes Benz", 2010, "Dizel", 12000),
-  new auto("Mercedes Benz", 2011, "Benzin", 10000),
+  new auto('Audi', 2016, 'Dizel', 14000),
+  new auto('Audi', 2010, 'Benzin', 7000),
+  new auto('Audi', 2006, 'Dizel', 5000),
+  new auto('Audi', 2010, 'Dizel', 11000),
+  new auto('BMW', 2011, 'Dizel', 10000),
+  new auto('BMW', 2010, 'Dizel', 14300),
+  new auto('BMW', 2009, 'Benzin', 9000),
+  new auto('BMW', 2006, 'Dizel', 6000),
+  new auto('Mercedes Benz', 2014, 'Benzin', 10000),
+  new auto('Mercedes Benz', 2011, 'Dizel', 10500),
+  new auto('Mercedes Benz', 2010, 'Dizel', 12000),
+  new auto('Mercedes Benz', 2011, 'Benzin', 10000),
 ];
 
-if (localStorage.getItem("automobili") == null) {
-  localStorage.setItem("automobili", JSON.stringify(automobili));
+if (localStorage.getItem('automobili') == null) {
+  localStorage.setItem('automobili', JSON.stringify(automobili));
 }
 
 // PRETRAGA AUTOMOBILA (FILTER)
 
 var ocisti = () => {
-  var bmw = document.getElementsByClassName("bmw");
+  var bmw = document.getElementsByClassName('bmw');
   for (var i = 0; i < bmw.length; i++) {
-    bmw[i].style.display = "none";
+    bmw[i].style.display = 'none';
   }
-  var audi = document.getElementsByClassName("audi");
+  var audi = document.getElementsByClassName('audi');
   for (var i = 0; i < audi.length; i++) {
-    audi[i].style.display = "none";
+    audi[i].style.display = 'none';
   }
-  var mercedes = document.getElementsByClassName("mercedes");
+  var mercedes = document.getElementsByClassName('mercedes');
   for (var i = 0; i < mercedes.length; i++) {
-    mercedes[i].style.display = "none";
+    mercedes[i].style.display = 'none';
   }
 };
 
-var pretrazi = document.getElementById("pretrazi");
+var pretrazi = document.getElementById('pretrazi');
 if (pretrazi !== null) {
-  pretrazi.addEventListener("click", (e) => {
+  pretrazi.addEventListener('click', (e) => {
     e.preventDefault();
     ocisti();
-    var izbor = document.getElementById("marka").value;
+    var izbor = document.getElementById('marka').value;
     var elem = document.getElementsByClassName(izbor);
-    var model = document.getElementById("model").value;
-    var karoserija = document.getElementById("karoserija").value;
-    var gorivo = document.getElementById("gorivo").value;
+    var model = document.getElementById('model').value;
+    var karoserija = document.getElementById('karoserija').value;
+    var gorivo = document.getElementById('gorivo').value;
 
-    var cena = document.getElementById("cena").value;
-    var godiste = document.getElementById("godiste").value;
+    var cena = document.getElementById('cena').value;
+    var godiste = document.getElementById('godiste').value;
 
     let cars = carFilters(izbor, model, karoserija, gorivo, cena, godiste);
 
@@ -143,76 +143,76 @@ function removeOptions(selectElement) {
 }
 
 // MODELI ZA SVAKU MARKU
-var marka = document.getElementById("marka");
+var marka = document.getElementById('marka');
 if (marka != null) {
-  marka.addEventListener("change", (e) => {
+  marka.addEventListener('change', (e) => {
     var vrednost = e.target.value;
-    var model = document.getElementById("model");
+    var model = document.getElementById('model');
     removeOptions(model);
-    if (vrednost == "bmw") {
-      var opt = document.createElement("option");
-      opt.value = "svi";
-      opt.innerHTML = "Svi modeli";
+    if (vrednost == 'bmw') {
+      var opt = document.createElement('option');
+      opt.value = 'svi';
+      opt.innerHTML = 'Svi modeli';
       model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "s1";
-      opt.innerHTML = "Serije 1";
+      var opt = document.createElement('option');
+      opt.value = 's1';
+      opt.innerHTML = 'Serije 1';
       model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "s3";
-      opt.innerHTML = "Serije 3";
+      var opt = document.createElement('option');
+      opt.value = 's3';
+      opt.innerHTML = 'Serije 3';
       model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "s5";
-      opt.innerHTML = "Serije 5";
+      var opt = document.createElement('option');
+      opt.value = 's5';
+      opt.innerHTML = 'Serije 5';
       model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "s7";
-      opt.innerHTML = "Serije 7";
-      model.appendChild(opt);
-    }
-    if (vrednost == "audi") {
-      var opt = document.createElement("option");
-      opt.value = "svi";
-      opt.innerHTML = "Svi modeli";
-      model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "a3";
-      opt.innerHTML = "A3";
-      model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "a4";
-      opt.innerHTML = "A4";
-      model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "a5";
-      opt.innerHTML = "A5";
-      model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "a6";
-      opt.innerHTML = "A6";
+      var opt = document.createElement('option');
+      opt.value = 's7';
+      opt.innerHTML = 'Serije 7';
       model.appendChild(opt);
     }
-    if (vrednost == "mercedes") {
-      var opt = document.createElement("option");
-      opt.value = "svi";
-      opt.innerHTML = "Svi modeli";
+    if (vrednost == 'audi') {
+      var opt = document.createElement('option');
+      opt.value = 'svi';
+      opt.innerHTML = 'Svi modeli';
       model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "a180";
-      opt.innerHTML = "A 180";
+      var opt = document.createElement('option');
+      opt.value = 'a3';
+      opt.innerHTML = 'A3';
       model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "e250";
-      opt.innerHTML = "E 250";
+      var opt = document.createElement('option');
+      opt.value = 'a4';
+      opt.innerHTML = 'A4';
       model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "c220";
-      opt.innerHTML = "C 220";
+      var opt = document.createElement('option');
+      opt.value = 'a5';
+      opt.innerHTML = 'A5';
       model.appendChild(opt);
-      var opt = document.createElement("option");
-      opt.value = "e200";
-      opt.innerHTML = "E 200";
+      var opt = document.createElement('option');
+      opt.value = 'a6';
+      opt.innerHTML = 'A6';
+      model.appendChild(opt);
+    }
+    if (vrednost == 'mercedes') {
+      var opt = document.createElement('option');
+      opt.value = 'svi';
+      opt.innerHTML = 'Svi modeli';
+      model.appendChild(opt);
+      var opt = document.createElement('option');
+      opt.value = 'a180';
+      opt.innerHTML = 'A 180';
+      model.appendChild(opt);
+      var opt = document.createElement('option');
+      opt.value = 'e250';
+      opt.innerHTML = 'E 250';
+      model.appendChild(opt);
+      var opt = document.createElement('option');
+      opt.value = 'c220';
+      opt.innerHTML = 'C 220';
+      model.appendChild(opt);
+      var opt = document.createElement('option');
+      opt.value = 'e200';
+      opt.innerHTML = 'E 200';
       model.appendChild(opt);
     }
   });
@@ -223,12 +223,12 @@ if (marka != null) {
 let page_path = window.location.pathname;
 let page_query = window.location.href;
 
-page_query = page_query.split("?");
+page_query = page_query.split('?');
 
 if (page_query.length > 1) {
-  page_query = page_query[1].split("=");
+  page_query = page_query[1].split('=');
 
-  if (page_query[0] === "car") {
+  if (page_query[0] === 'car') {
     let car_id = page_query[1];
 
     let cars_data = getAllCars();
@@ -273,26 +273,26 @@ if (page_query.length > 1) {
         </div>
       </div>`;
 
-        document.getElementsByTagName("main")[0].innerHTML = carHtml;
+        document.getElementsByTagName('main')[0].innerHTML = carHtml;
 
         break;
       }
     }
   }
 }
-if (document.getElementById("wrapper") !== null) {
+if (document.getElementById('wrapper') !== null) {
   showCarsData(getAllCars());
 }
 
 function getAllCars() {
   var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", "cars.json", false); // false for synchronous request
+  xmlHttp.open('GET', 'cars.json', false); // false for synchronous request
   xmlHttp.send(null);
   return JSON.parse(xmlHttp.responseText);
 }
 
 function showCarsData(cars_data) {
-  var carsHtml = "";
+  var carsHtml = '';
   for (const element in cars_data) {
     console.log(cars_data[element]);
     carsHtml +=
@@ -322,7 +322,7 @@ function showCarsData(cars_data) {
   </div>
 </div>`;
   }
-  document.getElementById("wrapper").innerHTML = carsHtml;
+  document.getElementById('wrapper').innerHTML = carsHtml;
 }
 
 function carFilters(izbor, model, karoserija, gorivo, cena, godiste) {
@@ -332,37 +332,37 @@ function carFilters(izbor, model, karoserija, gorivo, cena, godiste) {
   for (const key in cars_data) {
     let filter_status = true;
 
-    if (izbor !== "sve") {
+    if (izbor !== 'sve') {
       if (izbor !== cars_data[key].car_brand) {
         filter_status = false;
       }
     }
 
-    if (model !== "svi") {
+    if (model !== 'svi') {
       if (model !== cars_data[key].car_model) {
         filter_status = false;
       }
     }
 
-    if (karoserija !== "Karoserija") {
+    if (karoserija !== 'Karoserija') {
       if (karoserija !== cars_data[key].car_type.toLowerCase()) {
         filter_status = false;
       }
     }
 
-    if (gorivo !== "Gorivo") {
+    if (gorivo !== 'Gorivo') {
       if (gorivo !== cars_data[key].car_fuel.toLowerCase()) {
         filter_status = false;
       }
     }
 
-    if (cena !== "") {
+    if (cena !== '') {
       if (cena < cars_data[key].car_price) {
         filter_status = false;
       }
     }
 
-    if (godiste !== "Godiste do") {
+    if (godiste !== 'Godiste do') {
       if (godiste < cars_data[key].car_year) {
         filter_status = false;
       }

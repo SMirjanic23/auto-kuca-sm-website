@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 /* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 body {
@@ -96,10 +96,11 @@ main {
 /* IMAGE SLIDER */
 
 .slideshow-container {
-  max-width: max-content;
+  width: 100%;
+  /* height: 100vh; */
+  /* max-width: max-content; */
   top: auto;
   position: relative;
-  margin: auto;
 }
 
 /* Hide the images by default */
@@ -136,6 +137,11 @@ main {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.slideshow-container__dots {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 /* Caption text */
 .text {
   color: red;
@@ -165,7 +171,7 @@ main {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: black;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -173,7 +179,7 @@ main {
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #ffffff;
 }
 
 /* Fading animation */
@@ -230,13 +236,21 @@ main {
 .option-select {
   margin: 10px auto;
   padding: 10px;
-  /* height: 20%; */
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
   color: black;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.option-select option {
+  font-weight: 700;
+}
+.option-select:hover,
+.option-select option:hover {
+  cursor: pointer;
 }
 
 .button {
@@ -265,8 +279,9 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 20px;
+  padding: 10px 0;
   width: 200px;
   border-radius: 10px;
   background-color: black;
@@ -279,7 +294,9 @@ main {
 
 .car-card {
   padding: 2px 16px;
+  font-size: 1.2rem;
 }
+
 .car-button {
   width: 100%;
   border: 1px solid black;
@@ -287,6 +304,8 @@ main {
   background-color: red;
   color: white;
   font-size: 15px;
+  margin-top: 1rem;
+  padding: 0.5rem;
 }
 .car-button:hover {
   background-color: rgb(255, 112, 112);
@@ -300,7 +319,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -327,7 +346,12 @@ input[type="number"] {
   font-size: 40px;
 }
 .template-static h2 {
+  font-size: 2rem;
   margin-bottom: 10px;
+}
+
+.template-static p {
+  font-size: 1.1rem;
 }
 .location {
   display: flex;
@@ -335,11 +359,16 @@ input[type="number"] {
   width: 100%;
   margin: 10px;
   text-align: left;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .map-info {
-  margin-bottom: 10px;
   flex-direction: column;
+  margin-left: 1rem;
+}
+
+.map-info h3,
+.map-info p {
+  padding-bottom: 0.8rem;
 }
 
 .map-info iframe {
@@ -348,8 +377,11 @@ input[type="number"] {
 }
 .contact {
   text-align: center;
-  width: 300px;
+  width: 400px;
   flex-direction: column;
+}
+.contact h3 {
+  font-size: 1.8rem;
 }
 
 .register {
@@ -363,6 +395,8 @@ input[type="number"] {
 
 .form {
   padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-control {
@@ -373,17 +407,20 @@ input[type="number"] {
 
 .form-control label {
   color: black;
-  display: block;
   margin-bottom: 5px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .form-control input {
   border: 2px solid #f0f0f0;
   border-radius: 4px;
-  display: block;
   width: 100%;
   padding: 10px;
-  font-size: 14px;
+  font-size: 1rem;
+  color: black;
 }
 
 .form-control input:focus {
@@ -399,8 +436,7 @@ input[type="number"] {
   color: white;
   display: block;
   font-size: 16px;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 0.6rem;
   width: 100%;
 }
 
@@ -410,7 +446,10 @@ input[type="number"] {
 }
 
 .form-control #subject {
-  height: 100px;
+  height: 7rem;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6rem;
 }
 
 .admin-chart {
@@ -501,7 +540,7 @@ footer {
 
 .footer-distributed h3 {
   color: #ffffff;
-  font: normal 36px "Cookie", cursive;
+  font: normal 36px 'Cookie', cursive;
   margin: 0;
 }
 
@@ -586,7 +625,7 @@ footer {
 .footer-distributed .footer-company-about {
   line-height: 20px;
   color: #adadad;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: normal;
   margin: 0;
 }
@@ -594,7 +633,7 @@ footer {
 .footer-distributed .footer-company-about span {
   display: block;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -622,6 +661,9 @@ footer {
   background-color: red;
 }
 
+.footer-links a {
+  font-size: 1.1rem;
+}
 .footer-links a:hover {
   color: red;
 }
@@ -650,19 +692,25 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.popup-content input {
+  font-size: 1rem;
 }
 
 .btn-login {
   background: red;
   color: white;
-  margin: 10px auto;
+  margin: 0.5rem auto;
   display: block;
   width: 30%;
-  padding: 8px;
+  padding: 0.5rem;
   border: 1px solid gray;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .btn-signup {
@@ -690,6 +738,14 @@ footer {
   cursor: pointer;
 }
 
+#bar-chart {
+  margin: 2rem;
+  width: 1100px;
+}
+#second-chart {
+  margin: 2rem;
+}
+
 @media (max-height: 800px) {
   footer {
     position: static;
@@ -707,6 +763,13 @@ footer {
   }
   .footer-distributed .footer-center i {
     margin-left: 0;
+  }
+  .location {
+    /* align-items: center; */
+    justify-content: center;
+  }
+  .contact {
+    margin-top: 2rem;
   }
 }
 
@@ -735,6 +798,10 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  .nav-link a {
+    font-weight: 700;
+    font-size: 1.2rem;
   }
 
   .nav-link a:hover {
